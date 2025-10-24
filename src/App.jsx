@@ -7,6 +7,7 @@ import Card from './components/Card'
 //import Navbar from './components/Navbar'
 // <Navbar></Navbar>
 //nuovo branch prova commit
+//nuovo branch seconda commit
 function App() {
   const [count, setCount] = useState(0)
   const cities = [
