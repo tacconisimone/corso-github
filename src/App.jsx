@@ -40,6 +40,21 @@ function App() {
     },
   ];
 
+
+
+  function handleClick(){
+    alert("Ciao");
+  }
+  function handleChange(e){
+    console.log(e.target.value);
+  }
+  function handleSubmit(e){
+
+    e.preventDefault();  //mi permette di non far ricaricare la pagina.
+    console.log(e.target.value);
+  }
+
+
   return (
     <>
       <div className='grid grid-cols-4 gap-5'>
@@ -91,9 +106,28 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
+
+        <button onClick={handleClick}>Alert</button>
+        <input type="text" onChange={handleChange}/>
+
+        <form onSubmit={handleSubmit}>
+            <button type='submit' >Invia</button>
+        </form>
       </div>
     </>
   )
 }
 
 export default App
+
+
+
+//  formattazione automatica:                   |Maiusc + Alt + F
+//  Sposta la riga verso l'alto/verso il basso: |Alt + Freccia su/Giù
+//  Duplica la riga corrente:                   |Alt + Maiusc + Freccia su/Giù
+//  Apri il terminale integrato:                |Ctrl + ò
+//  Apri una nuova finestra del terminale:      Ctrl + Maiusc + O
+//  Commenta il codice selezionato:             Ctrl + ù
+//  Aggiungi una riga vuota sopra:              Ctrl + Maiusc + Invio
+//  Seleziona l'intera riga:                    Ctrl + L
